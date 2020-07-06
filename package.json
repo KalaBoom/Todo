@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "gulp start & nodemon app.js"
+    "dev": "gulp start & nodemon app.js --ignore 'tasks.json'"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,8 @@
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
   }
 }

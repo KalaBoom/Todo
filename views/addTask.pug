@@ -1,0 +1,18 @@
+extends common/layout
+
+block content
+  form.form(action="/create/addTask" method="post")
+      label.form__label Название
+      br
+      input.form__input(type="text" name="taskName")
+      br
+      br
+      label.form__label Описание
+      br
+      textarea.form__textarea(cols="32" type="number" name="taskDescription")
+      br
+      br
+      input.form__button(type="submit" value="Создать")
+
+block scripts
+            

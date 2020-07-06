@@ -5,7 +5,7 @@ const
     rename      = require('gulp-rename')
 
 module.exports = function scripts() {
-    return src('assets/scripts/*.js')
+    return src('assets/scripts/**/*.js')
         .pipe(plumber())
         .pipe(terser())
         .pipe(rename({suffix: '.min'}))

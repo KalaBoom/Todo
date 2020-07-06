@@ -1,0 +1,29 @@
+.header {
+    background-color: $color;
+    color: $background;
+    
+    font-weight: bold;
+    padding: 1.5em 0;
+    &__margin {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 80vw;
+        margin: 0 auto;
+    }
+    &__name {
+        font-size: 2.5rem;
+        color: $background;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    &__button {
+        font-size: 1.5rem;
+        color: $background;
+        &:hover {
+            cursor: pointer;
+            background-color: $background;
+            color: $color;
+        }
+    }
+}

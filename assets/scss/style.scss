@@ -1,0 +1,139 @@
+@import "includes/variables";
+@import "common/global";
+@import "common/header";
+
+.tasks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+}
+
+.complite-task {
+    text-decoration: line-through;
+    background-color: $complite-bg;
+    color: $complite-c;
+}
+
+.active-task {
+    background-color: $color;
+    color: $background;
+}
+
+.task {
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    max-width: 30vw;
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__name {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    &__description {
+        display: none;
+    }
+}
+
+.visible-task {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30,30,30, 0.2);
+    &__block {
+        position: relative;
+        background-color: $color;
+        max-width: 80vw;
+        margin: 10vw auto;
+        width: 50vw;
+        height: 50vh;
+        padding: 1em;
+        border-radius: 0.5em;
+    }
+    &__name {
+        font-size: 2rem;
+        background-color: $color;
+        color: $background;
+        height: 10%;
+    }
+    &__description {
+        font-size: 0.9rem;
+        background-color: $background;
+        color: $color;
+        border-radius: 0.1em;
+        padding: 0.3em;
+        word-break: break-all;
+        height: 80%;
+    }
+    &__close {
+        display: block;
+        position: absolute;
+        right: 0.5em;
+        top: 0.5em;
+        &:hover {
+            cursor: pointer;
+        }
+        &::after {
+            content: 'X';
+            color: $background;
+        }
+    }
+    &__button {
+        text-align: right;
+        color: $background;
+        &__btn {
+            border-radius: 0.5em;
+            padding: 0.5em;
+            &:hover {
+                cursor: pointer;
+                background-color: $background;
+                color: $color;
+            }
+        }
+    }
+}
+
+.form {
+    text-align: center;
+    color: $background;
+    max-width: 20vw;
+    margin: 2em 2em 0;
+    &__label {
+        display: inline-block;
+        font-size: 2rem;
+        width: 20vw;
+        background-color: $color;
+    }
+    &__input {
+        font-size: 1.5rem;
+        width: 20vw;
+        height: 5vh;
+    }
+    &__textarea {
+        width: 20vw;
+        height: 15vh;
+        font-size: 1.2rem;
+    }
+    &__button {
+        background-color: $color;
+        color: $background;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 0.2em;
+        padding: 0.5em 1em;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            cursor: pointer;
+            background-color: $background;
+            color: $color;
+            border: 1px solid $color;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+doctype html
+html(lang="ru")
+    block head
+        head
+            meta(charset="utf-8")
+            meta(content="width=device-width, initial-scale=1" name="viewport")
+            meta(content="ie=edge" http-equiv="x-ua-compatible")
+            link(rel="stylesheet" href="styles/style.min.css")
+            title #{title}
+    body.body
+        block header
+            include header
+        block content
+        block scripts
+            script(src='scripts/main.min.js' type='module')

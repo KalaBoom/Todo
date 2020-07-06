@@ -1,0 +1,9 @@
+extends common/layout
+include includes/task
+
+block content
+  main.main
+    include includes/visible-task
+    .tasks#tasks
+      each task in tasks
+        +task(task.name, task.description, task.complite)

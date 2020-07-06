@@ -1,0 +1,51 @@
+:root {
+    font-size: calc(1vw + 0.1em);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.body {
+    background-color: white;
+}
+
+.button {
+    padding: 0.7em 1em; 
+    border-radius: 1em;
+    transition: all 0.5s ease-out;
+}
+
+@keyframes showDescription {
+    from {
+        height: 1.4rem;
+    }
+    50% {
+        height: 3.5rem;
+    }
+    to {
+        height: auto;
+    }
+}

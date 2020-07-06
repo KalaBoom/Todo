@@ -1,0 +1,16 @@
+mixin task(name, description, complite)
+    if complite
+        .task.complite-task
+            .task__name=name
+            if description
+                span.task__description=description
+            else
+                span.task__description описания нет
+    else
+        .task.active-task
+            .task__name=name
+            if description
+                span.task__description=description
+            else
+                span.task__description описания нет
+

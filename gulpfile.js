@@ -10,3 +10,4 @@ function watcher(){
 }
 
 module.exports.start = series(clean, styles, scripts, images, watcher)
+
